@@ -3,9 +3,9 @@
 <div class="container">
         <div class="row">
                 <div class="col m4 s6" *ngFor="let pokemon of pokemons">
-                        <div class="card horizontal">
+                        <div class="card horizontal" (click)="selectPokemon(pokemon)" pkmnBorderCard>
                                 <div class="card-image">
-                                        <img [src]="pokemon.picture"/>
+                                        <img [src]="pokemon.picture" />
                                 </div>
                                 <div class="card-stacked">
                                         <div class="card-content">
@@ -13,7 +13,7 @@
                                                 <p><small>{{ pokemon.created }}</small></p>
                                         </div>
                                 </div>
-                        </div> 
+                        </div>
                 </div>
         </div>
 </div>
