@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
+import { DetailMessagePokemonComponent } from './detail-message-pokemon.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,13 @@ export class AppComponent implements OnInit {
     console.table(this.pokemons);
   }
 
+  
   selectPokemon(pokemonSelected: Pokemon) {
     console.log(`Vous avez choisi ${pokemonSelected.name}`);
+    this.pokemonSelected = pokemonSelected;
+  }
+
+  resetSelected() {
+    this.pokemonSelected = undefined;
   }
 }

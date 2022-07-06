@@ -1,0 +1,8 @@
+<div *ngIf="pokemonDetail" class="container">
+  <div class="center" style="border: solid black 2px; margin-bottom: 10px;">
+    You selected {{pokemonDetail.name}} congratulations !
+    <button (click)="close()">
+      Close
+    </button>
+  </div>
+</div>
